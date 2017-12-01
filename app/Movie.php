@@ -4,9 +4,9 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class vid_info extends Model
+class Movie extends Model
 {
-     public function Showcomplete(){
+    public function iscomplete(){
         return false;
     }
 }

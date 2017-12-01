@@ -11,15 +11,11 @@
 |
 */
 
-Route::get('/', function () {
-   $tasks = DB::table('vid_info')->get();
-
-   return view('video/index', compact('tasks'));
-});
+Route::get('/','videoidcontroller@getvideos');
 
 Route::get('/show/{task}',function($id){
     
-    $task = DB::table('vid_info')->find($id);
+    $task = DB::table('vid_infos')->find($id);
     dd($task);
     return view('video/show', compact('tasks'));
 });
